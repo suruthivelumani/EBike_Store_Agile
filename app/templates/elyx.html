@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elyx Mobility e-Bike</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elyx Mobility e-Bike</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Elyx Mobility e-Bike is a versatile and efficient electric bicycle designed to enhance your daily commute and leisure rides. It offers a perfect blend of performance, comfort, and style, making it an excellent choice for riders of all levels.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>High-capacity lithium-ion battery with a range of up to 50 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>Efficient 350W electric motor for smooth acceleration and a top speed of 20 mph.</td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Durable and lightweight aluminum frame with ergonomic design for comfortable riding.</td>
+            </tr>
+            <tr>
+                <td>Brakes</td>
+                <td>Front and rear disc brakes for precise and reliable stopping power.</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td>28-inch puncture-resistant tires for a stable and smooth ride on various terrains.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/eylx.jpg')}}" alt="Turner">
+        <img src="{{url_for('static', filename='images/eylxxx.jpg')}}" alt="Turner">
+        <img src="{{url_for('static', filename='images/eylxxxx.jpg')}}" alt="Turner">
+        <img src="{{url_for('static', filename='images/eylxx.jpg')}}" alt="Turner">
+    </div>
+</body>
+</html>

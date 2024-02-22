@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexpress e-Bike</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dexpress e-Bike</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Dexpress e-Bike is a cutting-edge electric bicycle designed for both urban commuting and off-road adventures. It combines innovative technology with a sleek and ergonomic design, making it an ideal choice for riders of all levels.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>Powerful lithium-ion battery with a range of up to 60 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>High-torque 500W electric motor for quick acceleration and versatile riding.</td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Lightweight and durable aluminum frame with adjustable geometry for comfort.</td>
+            </tr>
+            <tr>
+                <td>Suspension</td>
+                <td>Front suspension fork and rear shock absorber for a smooth ride on various terrains.</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td>27.5-inch all-terrain tires with excellent traction and puncture resistance.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/deexpress.jpg')}}" alt="Dexpress e-Bike">
+        
+        <img src="{{url_for('static', filename='images/de.jpg')}}" alt="Dexpress e-Bike in action">
+        <img src="{{url_for('static', filename='images/de2.jpg')}}" alt="Dexpress e-Bike in action">
+    </div>
+</body>
+</html>

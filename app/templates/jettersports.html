@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetter Sports e-Bike</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jetter Sports e-Bike</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Jetter Sports e-Bike is a high-performance electric bicycle designed for sports enthusiasts. Whether you're tackling tough trails or speeding through the city, this e-Bike offers an exhilarating ride.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>Advanced lithium-ion battery with a range of up to 60 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>High-powered 500W electric motor for rapid acceleration and hill climbing.</td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Lightweight aluminum alloy frame with sporty geometry for agile handling.</td>
+            </tr>
+            <tr>
+                <td>Suspension</td>
+                <td>Front and rear suspension for a smooth and comfortable ride over rough terrain.</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td>27.5-inch all-terrain tires with excellent grip and durability.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/js.jpg')}}" alt="Jetter Sports e-Bike">
+        <img src="{{url_for('static', filename='images/jc2.jpg')}}" alt="Jetter Sports e-Bike in action">
+    </div>
+</body>
+</html>

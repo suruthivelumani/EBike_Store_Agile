@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetter Classic e-Bike</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jetter Classic e-Bike</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Jetter Classic e-Bike is a stylish and eco-friendly electric bicycle that combines modern technology with classic design. It's perfect for both urban commuting and leisurely rides in the countryside.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>Long-lasting lithium-ion battery with a range of up to 50 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>Powerful 250W electric motor for smooth and efficient riding.</td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Classic steel frame with a comfortable upright riding position.</td>
+            </tr>
+            <tr>
+                <td>Brakes</td>
+                <td>Front and rear disc brakes for reliable stopping power.</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td>26-inch puncture-resistant tires for a comfortable and secure ride.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/jcc.jpg')}}" alt="Jetter Classic e-Bike">
+        <img src="{{url_for('static', filename='images/jc.jpg')}}" alt="Jetter Classic e-Bike in action">
+        <img src="{{url_for('static', filename='images/jc1.jpg')}}" alt="Jetter Classic e-Bike in action">
+
+    </div>
+</body>
+</html>

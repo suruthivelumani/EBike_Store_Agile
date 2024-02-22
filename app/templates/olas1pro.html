@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola S1 Pro Electric Scooter</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ola S1 Pro Electric Scooter</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Ola S1 Pro is a premium electric scooter that offers an eco-friendly and convenient way to travel in the city. With its advanced features and sleek design, it's the perfect choice for urban commuters.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>High-capacity lithium-ion battery with a range of up to 85 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>Powerful 4.2 kW electric motor for quick acceleration and a top speed of 60 mph.</td>
+            </tr>
+            <tr>
+                <td>Design</td>
+                <td>Sleek and modern design with premium materials and customizable color options.</td>
+            </tr>
+            <tr>
+                <td>Display</td>
+                <td>Interactive touchscreen display for navigation, music, and vehicle settings.</td>
+            </tr>
+            <tr>
+                <td>Safety</td>
+                <td>Advanced safety features, including ABS, regenerative braking, and LED lighting.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/OLA1.JPG')}}" alt="turner" width="350" height="150">
+        <img src="{{url_for('static', filename='images/OLA2.jpg')}}" alt="Turner" width="350" height="150">
+    </div>
+</body>
+</html>

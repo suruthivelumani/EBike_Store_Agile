@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAM E-BIKE</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezFsBrZuMzKoYu7FB/FusYcAhKInH6DfYFD8FO4qG4dR/5d3U0XuwrCSZyb37bJ6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.15.3/dist/ionicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezFsBrZuMzKoYu7FB/FusYcAhKInH6DfYFD8FO4qG4dR/5d3U0XuwrCSZyb37bJ6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezFsBrZuMzKoYu7FB/FusYcAhKInH6DfYFD8FO4qG4dR/5d3U0XuwrCSZyb37bJ6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.15.3/dist/css/ionicons.min.css">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.15.3/dist/ionicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezFsBrZuMzKoYu7FB/FusYcAhKInH6DfYFD8FO4qG4dR/5d3U0XuwrCSZyb37bJ6" crossorigin="anonymous">
+
+  <style>
+    /* CSS to increase the width and height of the "Book" button */
+    input[type="submit"] {
+      width: 150px; /* You can adjust the width as needed */
+      height: 50px; /* You can adjust the height as needed */
+    }
+
+    h2.section-title {
+      font-size: 40px; /* Adjust the font size as needed */
+
+    }
+
+    /* CSS to change the font style for the whole form */
+    form,
+    form * {
+      font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with your chosen font family */
+      font-size: 15px;
+      color: black;
+    }
+
+    /* CSS to add borders to form fields */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea
+     {
+      border: 1px solid #ccc; /* Add a 1px gray border */
+      border-radius: 5px; /* Rounded corners for fields */
+      padding: 5px; /* Add some padding for spacing */
+      width: 100%; /* Make the fields full-width */
+      height: 40px; 
+      width: 200px;
+    }
+
+    /* CSS to increase the height of input fields and textarea */
+    input[type="text"],
+    input[type="tel"],
+    select,
+    textarea {
+      height: 40px; /* You can adjust the height as needed */
+    }
+
+    /* CSS to increase the width of the "Select a model" dropdown */
+    select[name="bike"] {
+      width: 200px; /* You can adjust the width as needed */
+    }
+
+    /* CSS to style the "Book Now" button as a rounded rectangle */
+    input[type="submit"] {
+      width: 100px; /* Adjust the width as needed */
+      height: 50px; /* Adjust the height as needed */
+      border: none; /* Remove default button border */
+      background-color: #000509; /* Button background color */
+      color: #fff; /* Text color */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 16px; /* Font size */
+      cursor: pointer; /* Add a pointer cursor on hover */
+    }
+
+    /* CSS to increase the width and height of the date input field */
+    input[type="date"] {
+      width: 200px; /* You can adjust the width as needed */
+      height: 40px; /* You can adjust the height as needed */
+    }
+
+    /* CSS to increase the width and height of the "Preferred Time" dropdown */
+    select[name="time"] {
+      width: 200px; /* You can adjust the width as needed */
+      height: 40px; /* You can adjust the height as needed */
+    }
+
+    /* CSS to increase the height of the "Additional Comments" textarea */
+    textarea[name="message"] {
+      width: 200px; /* You can adjust the width as needed */
+      height: 40px;
+    }
+
+    /* CSS to add a border around the whole form */
+    .container1 {
+      border: 5px solid #000000; /* Border style and color */
+      /* Add some padding for spacing */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px;
+      margin: 10px;
+      margin-left: 400px;
+      margin-right: 400px;
+    }
+    
+
+    /* CSS to add a border around the whole form */
+
+
+  </style>
+
+  
+  
+</head>
+
+<body id="top">
+  <header class="header" data-header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg ">
+        <div class="navbar-brand">
+          <img src="{{url_for('static', filename='images/logo.jpg')}}" alt="Logo" title="Ram e-Bike" width="50" height="30">
+        </div>
+        <p class="navbar-text ml-2">
+          Ram e-Bike
+        </p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link {% if 'home' in request.endpoint %}selected{% endif %}" href="{{url_for('home')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if 'aboutus' in request.endpoint %}selected{% endif %}" href="{{url_for('aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if 'e_bikes' in request.endpoint %}selected{% endif %}" href="{{url_for('e_bikes')}}">e-Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if 'test_ride' in request.endpoint %}selected{% endif %}" href="{{url_for('test_ride')}}">Test Ride</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if 'service' in request.endpoint %}selected{% endif %}" href="{{url_for('service')}}">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if 'user_bookings' in request.endpoint %}selected{% endif %}" href="{{url_for('user_bookings')}}">View Bookings</a>
+            </li>
+            
+            <div class="user-info-container"><li class="nav-item user-info">
+              {% if current_user.is_authenticated %}
+              <p>Welcome, {{ current_user.email }}! <br> <a href="{{ url_for('logout') }}"
+                  class="logout-link">Logout</a></p>
+              {% endif %}
+            </li>
+          </div>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article>      
+      <br><br><br><br><br><br>
+          <section class="section destination">
+            <div class="container1">
+              <br><br>
+              <p class="section-subtitle">Ride Electric</p>
+    
+              <h2 class="h2 section-title">Service Booking</h2>
+                      
+              
+                <form method="POST" action="{{ url_for('service') }}" name="myform" onsubmit="return validateform()" novalidate>
+            		<center>
+				<table>
+				<tr>               
+                			<td><label>Name :</label></td>
+                			<td><input type="text" name="user" id="user" value="{{ user.name if user else '' }}"  readonly required><br><br></td>
+				</tr>
+
+				<tr>
+							<td><label>Email :</label></td>
+                			<td><input type="email" name="email" id="email" value="{{ user.email if user else '' }}"  readonly required><br><br></td>
+				</tr>
+
+				<tr>
+                			<td><label>Mobile Number :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label></td>
+                			<td><input type="tel" name="phone" value="{{ user.phone if user else '' }}"  readonly required><br><br></td>
+				</tr>
+
+				<tr>
+					<td><label for="bike">Bike Model :</label></td>
+					<td><select name="bike" id="bike" value="" required>
+						<option value="" disabled selected>Select a model</option>
+                    	
+						<option value="DExpress">DExpress</option>
+            <option value="Elyx Mobility">Elyx Mobility</option>
+            <option value="Jetter Classic">Jetter Classic</option>
+            <option value="Jetter Sport">Jetter Sport</option>
+						<option value="Ola S1 Pro">Ola S1 Pro</option>
+            <option value="Turner Ex">Turner Ex</option>
+            <option value="TVS iQube Electric">TVS iQube Electric</option>
+            <option value="Zooba">Zooba</option>
+            
+            
+				</select><br><br></td>
+				</tr>
+        <tr>
+					<td><label for="service">Type of Service :</label></td>
+					<td><select name="service" id="service" value="" required>
+						<option value="" disabled selected>Select a service</option>
+                    	
+						<option value="General / Maintenance">General / Maintenance</option>
+						<option value="Battery">Battery</option>
+            <option value="Motor">Motor</option>
+            <option value="Brake System">Brake System</option>
+            <option value="Gear System">Gear System</option>
+            <option value="Electrical System">Electrical System</option>
+            <option value="Software Update">Software Update</option>
+            <option value="Frame and Suspension">Frame and Suspension</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Component Upgrade / Accessory Installation">Component Upgrade / Accessory Installation</option>
+				</select><br><br></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="date">Service Appointment Date :&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+					</td>						
+                	<td>
+						<input type="date" id="date" name="date" value="" required><br><br>
+					</td>
+				</tr>
+
+                <tr>
+					<td><label for="time">Service Appointment Time :&nbsp&nbsp&nbsp&nbsp&nbsp</label></td>
+					<td><input type="time" name="time" id="time" value="" required> <br><br></td>
+				</tr>
+
+				<tr>
+                	<td><label for="message">Additional Complaints :&nbsp&nbsp&nbsp&nbsp&nbsp</label></td>
+                	<td><textarea class="form-control" id="message" name="message" rows="2" ></textarea></td><br><br>
+				</tr>
+				</table>
+				<br><br>
+                <input type="submit" name="login" value="Book"><br><br>
+				</center>
+        		</form>
+          </div>
+        </section>
+      </article>
+  </main>  
+    <footer class="footer" style="background-image: url('./assets/images/your-new-footer-bg.png')">
+      <div class="container">
+          <div class="footer-top row">
+              <div class="footer-section col-md-3 mx-auto text-center">
+                  <p class="footer-list-title">Address</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li>Ram e-Bike,</li>
+                      <li>391, Perundurai Road,</li>
+                      <li>Opp. Federal Bank,</li>
+                      <li>Erode - 638011,</li>
+                      <li>Tamil Nadu, India.</li>
+                  </ul>
+                  <br>
+                  <br>
+  
+                  <p class="footer-list-title">Book</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li><a href="{{url_for('test_ride')}}" class="footer-link">Test Ride</a></li>
+                      <li><a href="{{url_for('service')}}" class="footer-link">Service</a></li>
+                  </ul>
+              </div>
+  
+              <div class="footer-section col-md-3 mx-auto text-center">
+                  <p class="footer-list-title">Our e-Bikes</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li><a href="{{url_for('dexpress')}}" class="footer-link">DExpress</a></li>
+                      <!-- Add other brands as needed -->
+                      <li><a href="{{url_for('elyx')}}" class="footer-link">Eylx Mobility</a></li>
+                      <li><a href="{{url_for('jetterclassic')}}" class="footer-link">Jetter Classic</a></li>
+                      <li><a href="{{url_for('jettersports')}}" class="footer-link">Jetter Sport</a></li>
+                      <li><a href="{{url_for('olas1pro')}}" class="footer-link">Ola S1 Pro</a></li>
+                      <li><a href="{{url_for('turnerex')}}" class="footer-link">Turner Ex</a></li>
+                      <li><a href="{{url_for('tvs')}}" class="footer-link">TVS iQube Electric</a></li>
+                      <li><a href="{{url_for('zooba')}}" class="footer-link">Zooba</a></li>
+                      <br>
+                  </ul>
+              </div>
+  
+              <div class="footer-section col-md-3 mx-auto text-center">
+                  <p class="footer-list-title">Contact</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li class="phone">+91 9360039697</li>
+                      <li class="phone">+91 9364109697</li>
+                      <li class="phone">+91 9345493454</li>
+                  </ul>
+                  <br>
+                  <br>
+                  <p class="footer-list-title">Mail</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li class="mail">ram.ebike@gmail.com</li>
+                      <li class="mail">erode.ram.ebike@gmail.com</li>
+                  </ul>
+              </div>
+  
+              <div class="footer-section col-md-3 mx-auto text-center">
+                  <p class="footer-list-title">Ram Group of Companies</p>
+                  <hr>
+                  <ul class="footer-list">
+                      <li class="company">Ram Battery</li>
+                      <li class="company">M R Metal</li>
+                      <li class="company">Hotel Ram Inn</li>
+                      <li class="company">Ram Vilas</li>
+                      <li class="company">Ram e-Bike</li>
+                  </ul>
+                  <br>
+                  <br>
+
+                  <p class="footer-list-title">Follow Us</p>
+                  <hr>
+                  <!-- Replace "#" with your actual social media URLs -->
+                  <ul class="social-list">
+                      <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                      <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                      <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                      <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                      <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                      <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <p class="copyright text-center mt-3 mb-2">&copy; 2023 Ram e-Bike. All Rights Reserved</p>
+  </footer>
+  
+  
+
+  <a href="#top" class="scroll-to-top" id="scrollToTopBtn" aria-label="Go To Top">
+    &uarr;
+  </a>
+  
+  
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+    // Add this script to your page
+    window.addEventListener('scroll', function () {
+      var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+      // If the page is scrolled down more than 20 pixels, show the button
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+  </script>
+  
+  </body>
+  </html> 

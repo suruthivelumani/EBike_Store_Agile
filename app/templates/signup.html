@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        .bdy{
+            background: rgb(220, 223, 223);
+        }
+        .row{
+            background:white;
+            border-radius: 50px;
+            box-shadow: 12px 12px 22px grey;
+        }
+        
+        
+        img{
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        .btn1{
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .btn1:hover{
+            background: white;
+            border: 1px solid;
+            color: black;
+        }
+        #head{
+            color:black;
+        }
+        
+    </style>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const registrationForm = document.forms["registrationForm"];
+    
+            registrationForm.addEventListener("submit", function (event) {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+    
+            function validateForm() {
+                const uname = registrationForm.elements["uname"].value;
+                const uemail = registrationForm.elements["uemail"].value;
+                const upassword = registrationForm.elements["upassword"].value;
+                const confirm_password = registrationForm.elements["confirm_password"].value;
+                const uphone = registrationForm.elements["uphone"].value;
+    
+                if (uname.trim().length < 6) {
+                    alert("Name should be greater than 5 characters.");
+                    return false;
+                }
+    
+                if (uname.trim().length > 30) {
+                    alert("Name should be less than 30 characters.");
+                    return false;
+                }
+    
+                if (!isValidName(uname)) {
+                    alert("Name should consist of only characters.");
+                    return false;
+                }
+    
+                if (uemail.trim() === "" || !isValidEmail(uemail)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+    
+                if (upassword.trim().length < 6 || upassword.trim().length > 20 || !isValidPassword(upassword)) {
+                    alert("Password should be a combination of at least one small letter, one capital letter, one special symbol, and one digit. The length of the password must be greater than 5 characters and less than 20 characters.");
+                    return false;
+                }
+    
+                if (upassword !== confirm_password) {
+                    alert("Password and confirm password do not match.");
+                    return false;
+                }
+    
+                if (uphone.trim() === "" || !isValidPhone(uphone)) {
+                    alert("Please enter a valid phone number.");
+                    return false;
+                }
+    
+                return true;
+            }
+    
+            function isValidName(name) {
+                // Check if the name consists of only characters
+                const nameRegex = /^[A-Za-z]+$/;
+                return nameRegex.test(name);
+            }
+    
+            function isValidEmail(email) {
+                // Basic email validation using a regular expression
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+    
+            function isValidPassword(password) {
+                // Password validation: at least one small letter, one capital letter, one special symbol, and one digit.
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{6,})/;
+                return passwordRegex.test(password);
+            }
+    
+            function isValidPhone(phone) {
+                // Basic phone number validation using a regular expression
+                const phoneRegex = /^\d{10}$/; // Assumes a 10-digit phone number
+                return phoneRegex.test(phone);
+            }
+        });
+    </script>
+    
+    
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body class="bdy">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for message, category in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <section class="Form my-4 mx-5">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <img src= "{{url_for('static', filename='images/logo_full.svg')}}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-7 px-5 pt-5" >
+                    
+                    <h1 class="font-weight-bold py-3 text-center" id="head">Register</h1>
+                    
+                        
+    <form method="post" action="{{ url_for('signup') }}" name="registrationForm">
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="text" placeholder="Enter Name" class="form-control my-3 p-3" name="uname" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="email" placeholder="Enter Email" class="form-control my-3 p-3" name="uemail" required>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="password" placeholder="Enter Password" class="form-control my-3 p-3" name="upassword" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="password" placeholder="Confirm Password" class="form-control my-3 p-3" name="confirm_password" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="tel" placeholder="Enter Phone Number" class="form-control my-3 p-3" name="uphone" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-7 mx-auto">
+                <input type="submit" class="btn1 mt-3 mb-5" value="Register" id="login-button">
+            </div>
+        </div>
+        
+        <p class="text-center">Already have an account? <a href="{{url_for('login')}}">Login</a></p>
+    </form>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

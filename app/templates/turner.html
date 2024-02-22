@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnerex e-Bike</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Turnerex e-Bike</h1>
+    </header>
+    <div class="container">
+        <h2>Description</h2>
+        <p>The Turnerex e-Bike is an innovative and versatile electric bicycle designed for urban commuting and outdoor adventures. With its cutting-edge features and stylish design, it's the perfect choice for riders of all levels.</p>
+
+        <h2>Key Features</h2>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>Advanced lithium-polymer battery with a range of up to 70 miles on a single charge.</td>
+            </tr>
+            <tr>
+                <td>Motor</td>
+                <td>Efficient 350W electric motor for a smooth and silent ride with adjustable power modes.</td>
+            </tr>
+            <tr>
+                <td>Frame</td>
+                <td>Durable and lightweight aluminum frame with a sleek and modern design.</td>
+            </tr>
+            <tr>
+                <td>Suspension</td>
+                <td>Front fork suspension and rear shock absorber for comfortable off-road riding.</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td>29-inch multi-terrain tires for excellent traction on various surfaces.</td>
+            </tr>
+        </table>
+
+        <h2>Images</h2>
+        <img src="{{url_for('static', filename='images/turnerll.jpg')}}" alt="turner" >
+        <img src="{{url_for('static', filename='images/tunerimg.jpg')}}" alt="Turner">
+        <img src="{{url_for('static', filename='images/tuner.jpg')}}" alt="Turner">
+    </div>
+</body>
+</html>
